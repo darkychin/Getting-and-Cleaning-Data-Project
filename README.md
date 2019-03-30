@@ -1,5 +1,4 @@
 # Getting-and-Cleaning-Data-Project
-------
 
 ## Background
 
@@ -16,20 +15,21 @@ Here are the data for the project:
 ---
 
 ### Table of Contents
-**File | Data**
+**File** | **Data**
 --- | ---
 run_analysis.R | [Project-Data]
 
 ---
 
 > Prerequisite : Please set up your desired directory before continue from here.
+
 ### R-script Explained
  
 #### Step 1: Prepare Data
-1. Download file from [Project-Data] into directory
+1. Download file from [Project-Data] into directory, and save it as *Dataset.zip*
 
 ```r
-download.file("https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip","Dataset.zip")
+    download.file("https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip","Dataset.zip")
 
 ```
 
