@@ -14,7 +14,7 @@ Here are the data for the project:
 
 ---
 
-### Table of Contents
+## Table of Contents
 **File** | **Data**
 --- | ---
 run_analysis.R | [Project-Data]
@@ -23,9 +23,9 @@ run_analysis.R | [Project-Data]
 
 > Prerequisite : Please set up your desired directory before continue from here.
 
-### R-script Explained
+## R-script Explained
  
-#### Step 1: Prepare Data
+#### Step 1 : Prepare Data
 1. Download file from [Project-Data] into directory, and save it as *Dataset.zip*
 
 ```r
@@ -60,7 +60,7 @@ run_analysis.R | [Project-Data]
 * 'train/Inertial Signals/body_gyro_x_train.txt': The angular velocity vector measured by the gyroscope for each window sample. The units are radians/second. 
 
 
-#### Analysis
+#### Step 2 : Analysis
 Procedure and thought:
 
 
@@ -69,5 +69,13 @@ Procedure and thought:
 
 
 
+## Dateset License
+Use of this dataset in publications must be acknowledged by referencing the following publication [1] 
+
+[1] Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
+
+This dataset is distributed AS-IS and no responsibility implied or explicit can be addressed to the authors or their institutions for its use or misuse. Any commercial use is prohibited.
+
+Jorge L. Reyes-Ortiz, Alessandro Ghio, Luca Oneto, Davide Anguita. November 2012.
 
 [Project-Data]:https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
