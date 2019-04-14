@@ -2,6 +2,115 @@
 
 ## Directory is begin with Dataset.zip\UCI HAR Dataset\...
 
+## Read Data
+
+### 2. Read Data:  // Need to move to explorations
+
+### Zip file directory
+zip_dir <- paste0(wd,"/Dataset.zip")
+
+
+### File : activity_labels.txt
+
+### Establish link to "features.txt" inside zip file
+file <- unz(zip_dir,"UCI HAR Dataset/activity_labels.txt")
+# ------------------------------
+# *Important note for unz() and "description" :
+#   unz reads (only) single files within zip files, in binary mode. 
+#   The "description" is the full path to the zip file, with '.zip' extension if required.
+# ------------------------------
+
+### Read file into a "activity_labels" dataframe
+activity_labels <- read.table(file,header = FALSE)
+
+
+### File : features.txt
+
+### Establish link to "features.txt" inside zip file
+file <- unz(zip_dir,"UCI HAR Dataset/features.txt")
+
+### Read file into a "features" dataframe
+features <- read.table(file,header = FALSE)
+
+
+## Test Data
+
+### File : test/subject_test.txt
+
+### Establish link to "subject_test.txt" inside zip file
+file <- unz(zip_dir,"UCI HAR Dataset/test/subject_test.txt")
+
+### Read file into a "subject_test.txt" dataframe
+subject_test <- read.table(file,header = FALSE)
+
+
+### File : test /X_test.txt
+
+### Establish link to "X_test.txt" inside zip file
+file <- unz(zip_dir,"UCI HAR Dataset/test/X_test.txt")
+
+### Read file into a "X_test.txt" dataframe
+X_test <- read.table(file,header = FALSE)
+
+
+### File : test /y_test.txt
+
+### Establish link to "y_test.txt" inside zip file
+file <- unz(zip_dir,"UCI HAR Dataset/test/y_test.txt")
+
+### Read file into a "y_test.txt" dataframe
+y_test <- read.table(file,header = FALSE)
+
+
+## Train Data 
+
+### File : train/subject_train.txt
+
+### Establish link to "subject_train.txt" inside zip file
+file <- unz(zip_dir,"UCI HAR Dataset/train/subject_train.txt")
+
+### Read file into a "subject_train.txt" dataframe
+subject_train <- read.table(file,header = FALSE)
+
+
+### File : train/X_train.txt
+
+### Establish link to "X_train.txt" inside zip file
+file <- unz(zip_dir,"UCI HAR Dataset/train/X_train.txt")
+
+### Read file into a "X_train.txt" dataframe
+X_train <- read.table(file,header = FALSE)
+
+
+### File : train/y_train.txt
+
+### Establish link to "y_train.txt" inside zip file
+file <- unz(zip_dir,"UCI HAR Dataset/train/y_train.txt")
+
+### Read file into a "y_train.txt" dataframe
+y_train <- read.table(file,header = FALSE)
+
+
+### File : train/Inertial Signals/body_acc_x_train.txt
+
+### Establish link to "body_acc_x_train.txt" inside zip file
+file <- unz(zip_dir,"UCI HAR Dataset/train/Inertial Signals/body_acc_x_train.txt")
+
+### Read file into a "body_acc_x_train.txt" dataframe
+body_acc_x_train <- read.table(file,header = FALSE)
+
+
+### File : train/Inertial Signals/body_acc_y_train.txt
+
+### Establish link to "body_acc_y_train.txt" inside zip file
+file <- unz(zip_dir,"UCI HAR Dataset/train/Inertial Signals/body_acc_y_train.txt")
+
+### Read file into a "body_acc_x_train.txt" dataframe
+body_acc_y_train <- read.table(file,header = FALSE)
+
+
+
+
 
 ### Exploration of "activity_labels" dataframe
 ### Directory : ...\
