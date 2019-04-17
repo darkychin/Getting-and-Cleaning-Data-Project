@@ -206,5 +206,3 @@ summ_tidy <-
 
 ## Step 6: Write "summ_tidy" data into "tidydata.txt" text file
 write.table(summ_tidy,"tidydata.txt")
-
-## prepare a read.table in ReadMe
