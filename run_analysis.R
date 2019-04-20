@@ -3,11 +3,17 @@
 ## Get Working Directory
 wd <- getwd()
 
+
 ## Step 1: Prepare Data
 
-### 1. Download data file from url: 
-### - since .zip file is binary, mode ="wb" is required. (Read ?download.file)
-download.file("https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip","Dataset.zip",mode="wb")
+### 1. Download data file from url:
+### Name the download file
+zipFile <- "Dataset.zip"
+### Validate if file does not exist in the directory, download it
+if(!file.exists(zipFile)){
+  ### Note: since .zip file is binary, mode ="wb" is required. (Read ?download.file)
+  download.file("https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip",zipFile,mode="wb")
+}
 
 
 ## Step 2: Explore Data
@@ -117,7 +123,7 @@ y_train <- read.table(file,header = FALSE)
 ## === Train Data END ===
 
 
-## Step 4: Merging Data
+## Step 4: Transforming and Merging Data
 
 ## 1. Prepare Test Data
 
@@ -189,20 +195,19 @@ Full_tidy <-
 
 
 ## Step 6: Prepare a final summarize data
-## Requirement: average of each activity and each subject
+## Requirement: average of each variable for each activity and each subject
 
 ## 1. Import library (dplyr)
 library(dplyr)
 
-## 2. Select "activity" , "subject" and "average"
+## 2. Select all 
 summ_tidy <- 
   Full_tidy %>% 
-  select(activity , subject , measurement) %>%
-## 3. Group by "activity" and "subject"
-  group_by(activity,subject) %>%
+## 3. Group by all except "measurement" column
+  group_by_at(names(Full_tidy)[-grep("measurement", names(Full_tidy))]) %>%
 ## 4. Summarise it with a new column "average" and save it as "summ_tidy"
   summarise(average=mean(measurement))
 
 
-## Step 6: Write "summ_tidy" data into "tidydata.txt" text file
+## Step 7: Write "summ_tidy" data into "tidydata.txt" text file
 write.table(summ_tidy,"tidydata.txt")
