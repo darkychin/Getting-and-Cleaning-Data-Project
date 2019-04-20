@@ -65,8 +65,7 @@ Steps:
    3) Separate "feature" column into "domain" and "feature" with first character
    4) Save processed Full as Full_tidy
 8. Summarize data
-   1) Select activity , subject and measurement from Full_tidy
-   2) Group them by activity , subject
-   3) Summarize them with a new column name "average" as the mean of measurement
-   4) Save them as summ_tidy
+   1) Group all variable from Full_tidy except "measurement"
+   2) Summarize them with a new column name "average" as the mean of measurement
+   3) Save them as summ_tidy
 9. Export summ_tidy as "tidydata.txt" to the working directory
