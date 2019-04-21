@@ -25,7 +25,7 @@
 ```
 
 ## Justification
-The final data, "tidydata" is tidy because it complies the principles that stated below, cite from [Tidy-Data]:
+The final data, "tidydata" is tidy because it complies the principles that stated below, cited from [Tidy-Data]:
 
 1. Each variable measured should be in one column
 2. Each different observation of that variable should be in a different row
@@ -33,6 +33,7 @@ The final data, "tidydata" is tidy because it complies the principles that state
 If you have multiple tables, they should include a column in the table that allows them to be joined or merged
 
 [Tidy-Data]:https://github.com/jtleek/datasharing#the-tidy-data-set
+
 
 ## Explanation on "run_analysis.R"
 

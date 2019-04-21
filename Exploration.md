@@ -1,10 +1,8 @@
 ## Exploration
 
-## Directory is begin with Dataset.zip\UCI HAR Dataset\...
+## Working directory is begin with "Dataset.zip\UCI HAR Dataset\..."
 
-## Read Data
-
-### 2. Read Data:  // Need to move to explorations
+## 1. Read Data
 
 ### Zip file directory
 zip_dir <- paste0(wd,"/Dataset.zip")
@@ -44,7 +42,7 @@ file <- unz(zip_dir,"UCI HAR Dataset/test/subject_test.txt")
 subject_test <- read.table(file,header = FALSE)
 
 
-### File : test /X_test.txt
+### File : test/X_test.txt
 
 ### Establish link to "X_test.txt" inside zip file
 file <- unz(zip_dir,"UCI HAR Dataset/test/X_test.txt")
@@ -53,7 +51,7 @@ file <- unz(zip_dir,"UCI HAR Dataset/test/X_test.txt")
 X_test <- read.table(file,header = FALSE)
 
 
-### File : test /y_test.txt
+### File : test/y_test.txt
 
 ### Establish link to "y_test.txt" inside zip file
 file <- unz(zip_dir,"UCI HAR Dataset/test/y_test.txt")
